@@ -1,0 +1,33 @@
+spring:
+    datasource:
+        driverClassName: com.mysql.cj.jdbc.Driver
+        url: jdbc:mysql://localhost:3306/springtest?useTimezone=true&serverTimezone=UTC
+        username: root
+        password: 47185252
+
+    jpa: 
+        properties: 
+            hibernate: 
+                dialect: org.hibernate.dialect.MySQL5InnoDBDialect 
+        hibernate:
+            ddl-auto: update
+        show-sql: false
+
+    flyway:
+        schemas: springtest
+        url: jdbc:mysql://localhost:3306/springtest?useTimezone=true&serverTimezone=UTC&useSSL=false
+        user: root
+        password: 47185252
+
+    jackson:
+        default-property-inclusion: non-null
+
+    servlet:
+        multipart:
+            enabled: true
+            file-size-threshold: 2KB
+            max-file-size: 200MB
+            max-request-size: 215MB
+
+file:
+    upload-dir: /Users/Alef/Desktop/SpringAPI's/UploadDir
